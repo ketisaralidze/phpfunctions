@@ -1,24 +1,21 @@
 <?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $inputPatientName = $_POST['inputPatientName'];
+    $inputDoctorName = $_POST['inputDoctorName'];
+    $inputDepartmentName = $_POST['inputDepartmentName'];
+    $inputPhone = $_POST['inputPhone'];
+    $inputSymptoms = $_POST['inputSymptoms'];
+    $inputDate = $_POST['inputDate'];
+    echo "Patient Name: $inputPatientName<br>";
+    echo "Doctor's Name: $inputDoctorName<br>";
+    echo "Department's Name: $inputDepartmentName<br>";
+    echo "Phone Number: $inputPhone<br>";
+    echo "Symptoms: $inputSymptoms<br>";
+    echo "Date: $inputDate<br>";
+    echo "Appointment booked successfully!<br>";
+}
 
-    if (isset($_POST['submit'])){
-        $PatientName=$_POST['PatientName'];
-        $DoctorsName=$_POST['DoctorsName'];
-        $DepartmentsName=$_POST['DepartmentsName'];
-        $PhoneNumber=$_POST['PhoneNumber'];
-        $Symptoms=$_POST['Symptoms'];
-       
-
-        echo "Your appointment is booked :" .$PatientName."<br>";
-        echo "Your appointment is booked :" .$DoctorsName."<br>";
-        echo "Your appointment is booked:" .$DepartmentsName."<br>";
-        echo "Your appointment is booked :" .$PhoneNumber."<br>";
-        echo "Your appointment is booked:" .$Symptoms."<br>";
-        
-        
-    }
 ?>
-
-
 
 
 
